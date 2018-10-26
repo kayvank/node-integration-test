@@ -47,6 +47,6 @@ export GRPC_PORT_INTERNAL=40404
 git clone git@github.com:kayvank/rsong-acquisition.git
 cd node-integration-test
 sbt compile 
-sbt run
+sbt "run 5000000  ## PAYLOAD-SIZE: 5 meg
 ```
 
