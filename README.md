@@ -12,11 +12,11 @@ This project is still under active development.  Any changes to the [rchain/mode
 ### quick start
 run the docker image for integration tests
 ```aidl
-for i in '10000 100000 1000000 10000000';do 
+for payload_size in '10000 100000 1000000 10000000';do 
     docker run \
         -e GRPC_PORT_EXTERNAL=>NODE-PORT\
         -e GRPC_SERVER=<NODE-HOST>  \
-        $i
+        $payload_size
 done
 ```
 
