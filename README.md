@@ -10,12 +10,13 @@ This project is still under active development.  Any changes to the [rchain/mode
 ## Getting Started
 
 ### quick start
-run the docker image for integration tests
+run the [docker image](https://hub.docker.com/r/kayvank/node-integration-test/tags/) for integration tests
 ```aidl
 for payload_size in '10000 100000 1000000 10000000';do 
     docker run \
         -e GRPC_PORT_EXTERNAL=>NODE-PORT\
         -e GRPC_SERVER=<NODE-HOST>  \
+        kayvank/node-integration-test \
         $payload_size
 done
 ```
@@ -42,11 +43,14 @@ export GRPC_PORT_INTERNAL=40404
 ```
 
 #### Clone Build &run
+build with [circleCi](https://circleci.com/gh/kayvank/node-integration-test)
+
+To build and run locally:
 
 ```
 git clone git@github.com:kayvank/rsong-acquisition.git
 cd node-integration-test
 sbt compile 
-sbt "run 5000000  ## PAYLOAD-SIZE: 5 meg
+sbt "run 5000000  ## PAYLOAD-SIZE: 5 megj
 ```
 
