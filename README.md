@@ -51,6 +51,6 @@ To build and run locally:
 git clone git@github.com:kayvank/rsong-acquisition.git
 cd node-integration-test
 sbt compile 
-sbt "run 5000000  ## PAYLOAD-SIZE: 5 megj
+sbt "run 5000000"  ## PAYLOAD-SIZE: 5 megj
 ```
 
